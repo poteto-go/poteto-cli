@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	cmdnew "github.com/poteto-go/poteto/cmd/cmd-new"
-	cmdrun "github.com/poteto-go/poteto/cmd/cmd-run"
+	cmdnew "github.com/poteto-go/poteto-cli/cmd/cmd-new"
+	cmdrun "github.com/poteto-go/poteto-cli/cmd/cmd-run"
 )
 
 func main() {

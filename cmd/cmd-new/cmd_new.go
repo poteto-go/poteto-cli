@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/poteto-go/poteto/cmd/engine"
+	"github.com/poteto-go/poteto-cli/engine"
 
 	"github.com/manifoldco/promptui"
 )

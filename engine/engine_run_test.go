@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/poteto-go/poteto/cmd/core"
+	"github.com/poteto-go/poteto-cli/core"
 )
 
 func TestSuccessRunRun(t *testing.T) {

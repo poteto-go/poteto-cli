@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/poteto-go/poteto/cmd/template"
+	"github.com/poteto-go/poteto-cli/template"
 	"github.com/poteto-go/poteto/utils"
 )
 
