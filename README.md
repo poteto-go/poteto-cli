@@ -49,3 +49,7 @@ debug_mode: true
 ```sh
 poteto-cli run
 ```
+
+## create app demo
+
+https://github.com/user-attachments/assets/4b739964-1b4f-4913-b643-5984bf1ceae1

@@ -14,21 +14,21 @@ func loadOption() core.RunnerOption {
 	defer configFile.Close()
 
 	if err != nil {
-		utils.PotetoPrint("you can use poteto.yaml")
+		utils.PotetoPrint("you can use poteto.yaml\n")
 		return core.DefaultRunnerOption
 	}
 
 	configBytes := make([]byte, 1024)
 	n, err := configFile.Read(configBytes)
 	if err != nil || n == 0 {
-		utils.PotetoPrint("warning error on reading poteto.yaml, use default option")
+		utils.PotetoPrint("warning error on reading poteto.yaml, use default option\n")
 		return core.DefaultRunnerOption
 	}
 
 	var option core.RunnerOption
 	err = utils.YamlParse(configBytes[:n], &option)
 	if err != nil {
-		utils.PotetoPrint("warning error on reading poteto.yaml, use default option")
+		utils.PotetoPrint("warning error on reading poteto.yaml, use default option\n")
 		return core.DefaultRunnerOption
 	}
 
@@ -38,14 +38,14 @@ func loadOption() core.RunnerOption {
 func CommandRun() {
 	option := loadOption()
 
-	fmt.Println("You can also use poteto-cli run -h | --help")
+	utils.PotetoPrint("You can also use poteto-cli run -h | --help\n")
 	for i := 2; i < len(os.Args); i++ {
 		switch {
 		case os.Args[i] == "-h", os.Args[i] == "--help":
 			help()
 			os.Exit(-1)
 		default:
-			fmt.Println("unknown command or option:", os.Args[i])
+			utils.PotetoPrint(fmt.Sprintf("unknown command or option: %s\n", os.Args[i]))
 			os.Exit(-1)
 		}
 	}
@@ -54,10 +54,10 @@ func CommandRun() {
 }
 
 func help() {
-	fmt.Println("poteto-cli run: hot-reload run api server")
-	fmt.Println("https://github.com/poteto-go/poteto")
-	fmt.Println("========================================")
-	fmt.Println("")
-	fmt.Println("Options:")
-	fmt.Println("  -h, --help: Display help (this is this)")
+	utils.PotetoPrint("poteto-cli run: hot-reload run api server\n")
+	utils.PotetoPrint("https://github.com/poteto-go/poteto\n")
+	utils.PotetoPrint("=========================================\n")
+	utils.PotetoPrint("\n")
+	utils.PotetoPrint("Options:\n")
+	utils.PotetoPrint("  -h, --help: Display help (this is this)\n")
 }

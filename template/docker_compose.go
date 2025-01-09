@@ -11,9 +11,7 @@ services:
       dockerfile: Dockerfile
     tty: true
     ports:
-      - 8000
-    depends_on:
-      - db
+      - 8080
     volumes:
       - .:/app
 `

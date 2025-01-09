@@ -22,7 +22,7 @@ func RunNew(param EngineNewParam) error {
 	prevDir, _ := filepath.Abs(".")
 	defer os.Chdir(prevDir)
 
-	utils.PotetoPrint(fmt.Sprintf("1. generating project: %s", param.ProjectName))
+	utils.PotetoPrint(fmt.Sprintf("1. generating project: %s\n", param.ProjectName))
 
 	dirArr := strings.Split(param.ProjectName, "/")
 	dirname := param.ProjectName
@@ -42,17 +42,17 @@ func RunNew(param EngineNewParam) error {
 		return err
 	}
 
-	utils.PotetoPrint("2. generating main.go")
+	utils.PotetoPrint("2. generating main.go\n")
 	if err := createMain(param); err != nil {
 		return err
 	}
 
-	utils.PotetoPrint("3. go mod tidy")
+	utils.PotetoPrint("3. go mod tidy\n")
 	if err := exec.Command("go", "mod", "tidy").Run(); err != nil {
 		return err
 	}
 
-	utils.PotetoPrint("4. create poteto.yaml")
+	utils.PotetoPrint("4. create poteto.yaml\n")
 	if err := createYaml(); err != nil {
 		return err
 	}
@@ -61,7 +61,7 @@ func RunNew(param EngineNewParam) error {
 		return nil
 	}
 
-	utils.PotetoPrint("5. generating docker")
+	utils.PotetoPrint("5. generating docker\n")
 	if err := createDockerfile(); err != nil {
 		return err
 	}
