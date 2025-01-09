@@ -39,7 +39,7 @@ poteto-cli new --fast
 - create `poteto.yaml`
 
 ```yaml
-version: "1.0"
+version: "1.1"
 build_script_path: "main.go"
 debug_mode: true
 ```
