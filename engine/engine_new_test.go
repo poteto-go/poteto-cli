@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"bou.ke/monkey"
-	"github.com/poteto-go/poteto/cmd/template"
+	"github.com/poteto-go/poteto-cli/template"
 )
 
 func TestRunNew(t *testing.T) {

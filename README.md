@@ -9,6 +9,17 @@ go install github.com/poteto-go/poteto-cli/cmd/poteto-cli@latest
 - hot-reload run for golang
 - support creating poteto app
 
+## Build From Docker
+
+You can also use from docker image
+
+https://hub.docker.com/repository/docker/poteto17/poteto-go/general
+
+```sh
+docker pull poteto17/poteto-go
+docker -it --rm poteto17/poteto-go:1.23 bash
+```
+
 ## Create new app
 
 Create file.
@@ -28,7 +39,7 @@ poteto-cli new --fast
 - create `poteto.yaml`
 
 ```yaml
-version: "0.27"
+version: "1.1"
 build_script_path: "main.go"
 debug_mode: true
 ```
