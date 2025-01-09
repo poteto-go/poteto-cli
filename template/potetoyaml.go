@@ -1,7 +1,7 @@
 package template
 
 var PotetoYamlTemplate = `
-version: "0.27"
+version: "1.0"
 build_script_path: "main.go"
 debug_mode: true
 `
