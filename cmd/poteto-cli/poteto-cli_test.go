@@ -45,6 +45,16 @@ func TestPotetoCliMai(t *testing.T) {
 			true,
 		},
 		{
+			"Test arg -v case",
+			"-v",
+			true,
+		},
+		{
+			"Test arg --version case",
+			"--version",
+			true,
+		},
+		{
 			"Test arg unknown case",
 			"-hello",
 			true,
