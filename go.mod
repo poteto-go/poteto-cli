@@ -7,7 +7,7 @@ require (
 	github.com/fatih/color v1.18.0
 	github.com/fsnotify/fsnotify v1.8.0
 	github.com/manifoldco/promptui v0.9.0
-	github.com/poteto-go/poteto v1.0.1
+	github.com/poteto-go/poteto v1.2.0
 )
 
 require (
