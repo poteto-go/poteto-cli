@@ -117,7 +117,7 @@ func (client *runnerClient) LogTransporter(ctx stdContext.Context, fileChangeStr
 
 				line, _, err := client.reader.ReadLine()
 				if err != nil {
-					if err == io.EOF {
+					if errors.Is(err, io.EOF) {
 						return nil
 					}
 					return err

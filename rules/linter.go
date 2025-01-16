@@ -7,8 +7,8 @@ import "github.com/quasilyte/go-ruleguard/dsl"
 
 func boolFunctionNaming(m dsl.Matcher) {
 	m.Match(`func $name($*params) bool { $*body }`).
-		Where(!m["name"].Text.Matches(`^(Is|is|Has|has).*`)).
-		Report("bool function name should start with 'Is' | 'is' | 'Has' | 'has'")
+		Where(!m["name"].Text.Matches(`^(Is|is|Has|has|match|Match).*`)).
+		Report("bool function name should start with 'Is' | 'is' | 'Has' | 'has' | 'match' | 'Match'")
 }
 
 func boolExprSimplify(m dsl.Matcher) {
@@ -109,16 +109,14 @@ func lenStrByteSlice(m dsl.Matcher) {
 	// len(string([]byte)) -> len([]byte)
 	m.Match(`len(string($b))`).
 		Where(m["b"].Type.Underlying().Is("[]byte")).
-		Report(`Call len() on the byte slice instead of converting to a string first`).
-		Suggest(`len($b)`)
+		Report(`Call len() on the byte slice instead of converting to a string first`)
 }
 
 func lenByteSliceStr(m dsl.Matcher) {
 	// len([]byte(string)) -> len(string)
 	m.Match(`len([]byte($s))`).
 		Where(m["s"].Type.Underlying().Is("string")).
-		Report(`Call len() on the string instead of converting to []byte first.`).
-		Suggest(`len($s)`)
+		Report(`Call len() on the string instead of converting to []byte first.`)
 }
 
 func badLock(m dsl.Matcher) {
@@ -161,6 +159,5 @@ func badLock(m dsl.Matcher) {
 func errorsIsNotUsed(m dsl.Matcher) {
 	m.Match(`err == $target`).
 		Where(m["target"].Type.Is("error")).
-		Report("err should be checked using errors.Is").
-		Suggest("errors.Is(err, $target)")
+		Report("err should be checked using errors.Is")
 }
