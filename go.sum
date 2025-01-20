@@ -19,8 +19,8 @@ github.com/mattn/go-colorable v0.1.13/go.mod h1:7S9/ev0klgBDR4GtXTXX8a3vIGJpMovk
 github.com/mattn/go-isatty v0.0.16/go.mod h1:kYGgaQfpe5nmfYZH+SKPsOc2e4SrIfOl2e/yFXSvRLM=
 github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY=
 github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
-github.com/poteto-go/poteto v1.2.1 h1:Ui/XAaGBOR+x8lA3HUg777fV7XCZyWpI8Mb5n6ueaNs=
-github.com/poteto-go/poteto v1.2.1/go.mod h1:8Dzv+M3/TzN03H/Z6C2BwIEqEet31Fjzp/1RDnhqtbo=
+github.com/poteto-go/poteto v1.3.0 h1:MSUNT6rfgDlBuOqAxAo4ChLs1g9nIj4P+yIg7EYi1XI=
+github.com/poteto-go/poteto v1.3.0/go.mod h1:dUxUpZRW6LyMN87IVEOJv+nJ7iW2OYDJu6EL5xD4F9E=
 github.com/quasilyte/go-ruleguard/dsl v0.3.22 h1:wd8zkOhSNr+I+8Qeciml08ivDt1pSXe60+5DqOpCjPE=
 github.com/quasilyte/go-ruleguard/dsl v0.3.22/go.mod h1:KeCP03KrjuSO0H1kTuZQCWlQPulDV6YMIXmpQss17rU=
 golang.org/x/sys v0.0.0-20181122145206-62eef0e2fa9b/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
