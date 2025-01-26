@@ -62,7 +62,6 @@ func NewRunnerClient(option RunnerOption) IRunnerClient {
 	}
 
 	wd, _ := os.Getwd()
-	watcher.Add(wd)
 	client := runnerClient{
 		runnerDir: wd,
 		watcher:   watcher,
@@ -72,7 +71,11 @@ func NewRunnerClient(option RunnerOption) IRunnerClient {
 	err = client.registerRecursive()
 	if err != nil {
 		utils.PotetoPrint(
-			fmt.Sprintf("%s cannot set fs watcher\n", color.HiBlueString("pdebug |")),
+			fmt.Sprintf(
+				"%s cannot set fs watcher with %s\n",
+				color.HiBlueString("pdebug |"),
+				err.Error(),
+			),
 		)
 
 		return &runnerClient{}
@@ -95,6 +98,7 @@ func (client *runnerClient) registerRecursive() error {
 		}
 		return nil
 	})
+
 	return err
 }
 
