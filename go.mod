@@ -1,7 +1,6 @@
 module github.com/poteto-go/poteto-cli
 
-go 1.21.8
-toolchain go1.23.5
+go 1.23
 
 require (
 	bou.ke/monkey v1.0.2
